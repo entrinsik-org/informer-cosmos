@@ -1,6 +1,6 @@
 {
   "name": "@entrinsik/integrated-rental",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides Informer add-ons for Integrated Rental customers",
   "main": "lib/index.js",
   "directories": {
