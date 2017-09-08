@@ -1,7 +1,7 @@
 {
-  "name": "node-module-template",
-  "version": "0.0.0",
-  "description": "A description of your module",
+  "name": "@entrinsik/integrated-rental",
+  "version": "1.0.0",
+  "description": "Provides Informer add-ons for Integrated Rental customers",
   "main": "lib/index.js",
   "directories": {
     "test": "test"
@@ -15,6 +15,10 @@
   },
   "author": "",
   "license": "MIT",
+  "peerDependencies": {
+    "lodash": "^3.10.1",
+    "moment": "2.18.1"
+  },
   "devDependencies": {
     "chai": "^2.1.1",
     "gulp": "^3.8.11",
