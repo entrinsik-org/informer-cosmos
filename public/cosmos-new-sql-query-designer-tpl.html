@@ -1,0 +1,14 @@
+<div layout="column">
+
+    <md-input-container class="bottom-fitted">
+        <label>Name</label>
+        <input type="text" ng-model="ctrl.name" md-maxlength="70" md-autofocus required/>
+    </md-input-container>
+
+    <inf-datasource-select language="cosmos-sql" ng-model="ctrl.query.datasourceId"></inf-datasource-select>
+
+    <inf-mapping-select datasource-id="ctrl.query.datasourceId" mapping-entity="ctrl.mappingEntity" friendly="true"
+                        ng-model="ctrl.mappingId"
+                        placeholder="Select Mapping" required></inf-mapping-select>
+
+</div>

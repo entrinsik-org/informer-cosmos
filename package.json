@@ -1,7 +1,7 @@
 {
-  "name": "@entrinsik/integrated-rental",
-  "version": "1.0.1",
-  "description": "Provides Informer add-ons for Integrated Rental customers",
+  "name": "@entrinsik/informer-cosmos",
+  "version": "1.0.0",
+  "description": "Informer driver for Microsoft Cosmos",
   "main": "lib/index.js",
   "directories": {
     "test": "test"
@@ -15,9 +15,11 @@
   },
   "author": "",
   "license": "MIT",
+  "dependencies": {
+    "documentdb": "^1.6.0"
+  },
   "peerDependencies": {
-    "lodash": "^3.10.1",
-    "moment": "2.18.1"
+    "lodash": "^3.10.1"
   },
   "devDependencies": {
     "chai": "^2.1.1",

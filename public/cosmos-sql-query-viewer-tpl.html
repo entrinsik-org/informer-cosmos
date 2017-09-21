@@ -1,0 +1,31 @@
+<md-list>
+    <md-list-item class="md-2-line">
+        <div class="md-list-item-text">
+            <h3>Datasource</h3>
+            <p>
+                {{ ctrl.query.embedded('inf:datasource').name }}
+            </p>
+        </div>
+    </md-list-item>
+
+    <md-list-item class="md-2-line">
+        <div class="md-list-item-text">
+            <h3>Mapping</h3>
+            <p>
+                {{ ctrl.query.payload.source.mappingId }}
+            </p>
+        </div>
+    </md-list-item>
+
+    <!-- SQL SNIPPET -->
+    <md-list-item class="md-2-line">
+        <div class="md-list-item-text">
+            <h3>Query</h3>
+            <p>
+                <span ng-show="!ctrl.query.payload">None</span>
+                <span ng-show="ctrl.query.payload" class="code">{{ ctrl.query.payload.query }}</span>
+            </p>
+        </div>
+    </md-list-item>
+
+</md-list>

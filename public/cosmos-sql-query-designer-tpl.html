@@ -1,0 +1,48 @@
+<md-content layout="column">
+
+    <md-toolbar class="clear">
+        <div class="md-toolbar-tools fitted">
+            <md-subheader inf-top-state-color class="md-no-sticky">Cosmos SQL</md-subheader>
+            <span flex></span>
+            <inf-action-menu class="fitted" ng-show="ctrl.queryActions.length">
+                <inf-action-item ng-repeat="action in ctrl.queryActions" action="action"></inf-action-item>
+            </inf-action-menu>
+        </div>
+    </md-toolbar>
+
+    <md-list class="md-dense">
+
+        <md-list-item class="md-2-line" inf-action action-id="query-designer-mapping" ng-click="true"
+                      locals="{ datasource: ctrl.datasource, query: ctrl.query }">
+            <div class="md-list-item-text">
+                <h3>Mapping</h3>
+                <p class="minor">
+                    <span ng-show="!ctrl.query.datasourceId">None</span>
+                    <span ng-show="ctrl.query.datasourceId">
+                        {{ ctrl.query.embedded('inf:datasource').name }}
+                        <md-icon md-font-icon="material-icons" class="divider">keyboard_arrow_right</md-icon>
+                        {{ ctrl.mapping.name || '&nbsp;' }}
+                    </span>
+                </p>
+            </div>
+        </md-list-item>
+
+        <!-- SQL SNIPPET -->
+        <md-list-item class="md-2-line" ng-click="ctrl.editQuery($event)" ng-class="{selected: ctrl.editing}"
+                      inf-top-state-color>
+            <div class="md-list-item-text">
+                <h3>Query</h3>
+                <p class="minor">
+                    <span ng-show="!ctrl.query.payload.query">None</span>
+                    <span ng-show="ctrl.query.payload.query" class="code">{{ ctrl.query.payload.query | maxCharacters:200 }}</span>
+                </p>
+            </div>
+            <div class="md-secondary half side-padded">
+                <md-icon>{{ ctrl.editing ? 'keyboard_arrow_left' : 'keyboard_arrow_right' }}
+                </md-icon>
+            </div>
+        </md-list-item>
+
+    </md-list>
+
+</md-content>
