@@ -19,7 +19,10 @@
     "documentdb": "^1.6.0"
   },
   "peerDependencies": {
-    "lodash": "^3.10.1"
+    "lodash": "^3.10.1",
+    "bluebird": "^2.9.8",
+    "ent-streams": "^1.11.0",
+    "joi": "^9.0.4"
   },
   "devDependencies": {
     "chai": "^2.1.1",
